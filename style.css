@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Ram";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+body {
+  max-width: 900px;
+  font-family: "Ram";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background: #fff;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 8px 0 16px 0;
+}
+
+button {
+  font-family: "Ram";
+  font-size: 20pt;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  line-height: 1;
+  color: #666;
+}
+
+button:disabled {
+  background-color: #aaaaaa;
+  color: #bebebe;
+  cursor: default;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-video {
+  display: none;
+}
+
+/* 시작 페이지 */
+#start-page {
+  text-align: center;
+}
+#start-page img {
+  display: flex;
+  margin-top: 180px;
+  margin-bottom: 50px;
+}
+
+/* 공용 버튼 영역 */
+.frame-select-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+#goToFrameSelectBtn {
+  padding: 30px 40px;
+}
+#backToCategoryBtn {
+  padding: 10px 20px;
+  color: #666;
+  font-size: 16pt;
+}
+#backToStartFromFrameBtn {
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16pt;
+}
+
+#backToStartBtn {
+  padding: 10px 20px;
+  color: #666;
+}
+#frameConfirmBtn {
+  background-color: transparent;
+  flex-basis: 100%;
+  margin: 20px;
+}
+
+#frameConfirmBtn:enabled {
+  color: #ff8bd8;
+}
+#frame-page {
+  width: 900px;
+}
+
+/* 카드 그리드 (대분류 / 소분류 공용) */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card {
+  width: 300px;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.card.active {
+  border-color: #ff8bd8;
+  box-shadow: 0 0 0px 5px rgba(255, 139, 216, 0.3);
+}
+
+/* 촬영 페이지 */
+#record-page {
+  margin: auto;
+  justify-content: center;
+}
+.preview-wrapper {
+  align-items: center;
+  justify-content: center;
+}
+
+#previewCanvas {
+  width: 640px;
+  max-width: 90vw;
+  border-radius: 0px;
+  background: #000;
+  margin-bottom: 20px;
+}
+
+#status {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+#startBtn {
+  display: block;
+  margin: 0 auto;
+}
+
+#startBtn {
+  padding: 10px 20px;
+}
+
+#backToFrameBtn {
+  display: block;
+  margin: 20px auto;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16pt;
+}
+#startBtn:disabled {
+  color: transparent;
+  background-color: transparent;
+}
+
+.record-status {
+  margin-bottom: 15px;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+}
+#shot-label {
+  margin-left: auto;
+}
+
+/* 결과 페이지: 합성 영상 + 합성 이미지 가로 배치 */
+.result-row {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#retryBtn {
+  display: block;
+  margin: 20px auto;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16pt;
+}
+
+#combinedVideo,
+#combinedImage {
+  margin-top: 12px;
+  width: 500px;
+  max-width: 40vw;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.hover-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px; /* 텍스트와 밑줄 간격 */
+  width: 100%;
+  height: 2px; /* 밑줄 두께 */
+  background: #666; /* 밑줄 색 */
+  transform: scaleX(0); /* 가로 0배 */
+  transform-origin: left; /* 왼쪽 기준으로 늘어나게 */
+  transition: transform 0.25s ease;
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+}
