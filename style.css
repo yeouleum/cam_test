@@ -104,6 +104,10 @@ button:disabled {
 #frameConfirmBtn:enabled {
   color: #ff8bd8;
 }
+#frameConfirmBtn:enabled .hover-underline::after {
+  background: #ff8bd8;
+}
+
 #frame-page {
   width: 900px;
 }
@@ -187,6 +191,10 @@ button:disabled {
 #startBtn:disabled {
   color: transparent;
   background-color: transparent;
+}
+
+#startBtn:disabled span {
+  display: none;
 }
 
 .record-status {

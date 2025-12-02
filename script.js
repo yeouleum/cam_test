@@ -786,7 +786,7 @@ frameConfirmBtn.addEventListener("click", async () => {
     //statusEl.textContent =
     // `총 ${TOTAL_SHOTS}번 중 1번째 촬영입니다. 버튼을 누르면 ` +
     //`${DURATION_SECONDS}초 동안 촬영이 시작되고 이후 자동으로 진행됩니다.`;
-    startBtn.textContent = `Click to Start!`;
+    startBtn.innerHTML = `<span class="hover-underline">Click to Start!</span>`;
     startBtn.disabled = false;
   } catch (err) {
     console.error(err);
@@ -835,7 +835,7 @@ retryBtn.addEventListener("click", () => {
   //statusEl.textContent =
   //`총 ${TOTAL_SHOTS}번 중 1번째 촬영입니다. 버튼을 누르면 ` +
   //`${DURATION_SECONDS}초 동안 촬영이 시작되고 이후 자동으로 진행됩니다.`;
-  startBtn.textContent = `Click to Start!`;
+  startBtn.innerHTML = `<span class="hover-underline">Click to Start!</span>`;
   startBtn.disabled = false;
 });
 
